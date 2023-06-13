@@ -56,10 +56,10 @@ def verificaResposta(resposta):
     return resposta.lower() in ['s', 'y']
 
 def interpretaLetras(verificaTipoLetras):
-    if verificaTipoLetras == 1:
+    if verificaTipoLetras == "1":
         tipoLetras = 'maiúsculas'
         return tipoLetras
-    elif verificaTipoLetras == 2:
+    elif verificaTipoLetras == "2":
         tipoLetras = 'minúsculas'
         return tipoLetras
     else:
@@ -76,7 +76,7 @@ teraLetras = input("Você deseja que as cifras possuam letras? S/N\n")
 letras = verificaResposta(teraLetras)
 
 if (letras):
-    verificaTipoLetras = int(input("Você deseja que essas letras sejam: 1: maiúsculas, 2: minúsculas ou qualquer outra tecla para ambas?\n"))
+    verificaTipoLetras = input("Você deseja que essas letras sejam: 1: maiúsculas, 2: minúsculas ou qualquer outra tecla para ambas?\n")
     tipoLetras = interpretaLetras(verificaTipoLetras)
         
 teraNumeros = input("Você deseja que as cifras possuam números? S/N\n")
